@@ -1,0 +1,30 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<DirectedGraph GraphDirection="LeftToRight" xmlns="http://schemas.microsoft.com/vs/2009/dgml">
+  <Nodes>
+    <Node Id="Nop.Plugin.Misc.FreeSample" Label="Nop.Plugin.Misc.FreeSample" Category="Project" />
+    <Node Id="DataAnnotationsExtensions 1.1.0.0" Label="DataAnnotationsExtensions 1.1.0.0" Category="Package" />
+    <Node Id="DataAnnotationsExtensions.MVC3 1.1.0.0" Label="DataAnnotationsExtensions.MVC3 1.1.0.0" Category="Package" />
+    <Node Id="WebActivator 1.2.0.0" Label="WebActivator 1.2.0.0" Category="Package" />
+  </Nodes>
+  <Links>
+    <Link Source="DataAnnotationsExtensions.MVC3 1.1.0.0" Target="DataAnnotationsExtensions 1.1.0.0" Category="Package Dependency" />
+    <Link Source="DataAnnotationsExtensions.MVC3 1.1.0.0" Target="WebActivator 1.2.0.0" Category="Package Dependency" />
+    <Link Source="Nop.Plugin.Misc.FreeSample" Target="DataAnnotationsExtensions 1.1.0.0" Category="Installed Package" />
+    <Link Source="Nop.Plugin.Misc.FreeSample" Target="DataAnnotationsExtensions.MVC3 1.1.0.0" Category="Installed Package" />
+    <Link Source="Nop.Plugin.Misc.FreeSample" Target="WebActivator 1.2.0.0" Category="Installed Package" />
+  </Links>
+  <Categories>
+    <Category Id="Project" />
+    <Category Id="Package" />
+  </Categories>
+  <Styles>
+    <Style TargetType="Node" GroupLabel="Project" ValueLabel="True">
+      <Condition Expression="HasCategory('Project')" />
+      <Setter Property="Background" Value="Blue" />
+    </Style>
+    <Style TargetType="Link" GroupLabel="Package Dependency" ValueLabel="True">
+      <Condition Expression="HasCategory('Package Dependency')" />
+      <Setter Property="Background" Value="Yellow" />
+    </Style>
+  </Styles>
+</DirectedGraph>

@@ -1,0 +1,153 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{CA1B3602-962A-4B6C-98FD-5BF6287F22B9}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Nop.Plugin.Misc.FreeSample</RootNamespace>
+    <AssemblyName>Nop.Plugin.Misc.FreeSample</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <TargetFrameworkProfile>
+    </TargetFrameworkProfile>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>..\..\Presentation\Nop.Web\Plugins\Misc.FreeSample\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>..\..\Presentation\Nop.Web\Plugins\Misc.FreeSample\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Autofac">
+      <HintPath>..\..\..\..\..\..\..\websites\nopCommerce_2.80_Source\Presentation\Nop.Web\bin\Autofac.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="Autofac.Configuration">
+      <HintPath>..\..\..\..\..\..\..\websites\nopCommerce_2.80_Source\Presentation\Nop.Web\bin\Autofac.Configuration.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="Autofac.Integration.Mvc">
+      <HintPath>..\..\..\..\..\..\..\websites\nopCommerce_2.80_Source\Presentation\Nop.Web\bin\Autofac.Integration.Mvc.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="DataAnnotationsExtensions">
+      <HintPath>..\..\packages\DataAnnotationsExtensions.1.1.0.0\lib\NETFramework40\DataAnnotationsExtensions.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="DataAnnotationsExtensions.ClientValidation">
+      <HintPath>..\..\packages\DataAnnotationsExtensions.MVC3.1.1.0.0\lib\NETFramework40\DataAnnotationsExtensions.ClientValidation.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.Entity" />
+    <Reference Include="System.Data.Entity.Design" />
+    <Reference Include="System.Data.Linq" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.Mvc, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+    <Reference Include="WebActivator">
+      <HintPath>..\..\..\..\..\..\..\websites\nopCommerce_2.80_Source\Deployable\nop_2.80\bin\WebActivator.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="App_Start\RegisterClientValidationExtensions.cs" />
+    <Compile Include="Controllers\SupplyDeliveryQuoteController.cs" />
+    <Compile Include="Controllers\HomeInstallationQuoteController.cs" />
+    <Compile Include="Controllers\OrderFreeSampleController.cs" />
+    <Compile Include="DependencyRegistrar.cs" />
+    <Compile Include="FreeSamplePlugin.cs" />
+    <Compile Include="Models\SupplyDeliveryQuoteModel.cs" />
+    <Compile Include="Models\HomeInstallationQuoteModel.cs" />
+    <Compile Include="RouteProvider.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Models\OrderFreeSampleModel.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Description.txt">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="packages\DataAnnotationsExtensions.1.1.0.0\lib\NETFramework40\DataAnnotationsExtensions.dll" />
+    <Content Include="packages\DataAnnotationsExtensions.MVC3.1.1.0.0\lib\NETFramework40\DataAnnotationsExtensions.ClientValidation.dll" />
+    <Content Include="packages\WebActivator.1.2.0.0\lib\NETFramework40\WebActivator.dll" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Views\OrderFreeSampleSuccessful.cshtml" />
+    <EmbeddedResource Include="Views\OrderFreeSample.cshtml" />
+    <EmbeddedResource Include="Views\HomeInstallationQuote.cshtml" />
+    <EmbeddedResource Include="Views\HomeInstallationQuoteSuccessful.cshtml" />
+    <None Include="packages.config" />
+    <None Include="packages\DataAnnotationsExtensions.1.1.0.0\DataAnnotationsExtensions.1.1.0.0.nupkg" />
+    <None Include="packages\DataAnnotationsExtensions.1.1.0.0\DataAnnotationsExtensions.1.1.0.0.nuspec" />
+    <None Include="packages\DataAnnotationsExtensions.MVC3.1.1.0.0\content\App_Start\RegisterClientValidationExtensions.cs.pp" />
+    <None Include="packages\DataAnnotationsExtensions.MVC3.1.1.0.0\DataAnnotationsExtensions.MVC3.1.1.0.0.nupkg" />
+    <None Include="packages\DataAnnotationsExtensions.MVC3.1.1.0.0\DataAnnotationsExtensions.MVC3.1.1.0.0.nuspec" />
+    <None Include="packages\repositories.config" />
+    <None Include="packages\WebActivator.1.2.0.0\WebActivator.1.2.0.0.nupkg" />
+    <None Include="packages\WebActivator.1.2.0.0\WebActivator.1.2.0.0.nuspec" />
+    <EmbeddedResource Include="Views\SupplyDeliveryQuote.cshtml" />
+    <EmbeddedResource Include="Views\SupplyDeliveryQuoteSuccessful.cshtml" />
+    <None Include="web.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\..\..\..\..\..\websites\nopCommerce_2.80_Source\Libraries\Nop.Core\Nop.Core.csproj">
+      <Project>{6bda8332-939f-45b7-a25e-7a797260ae59}</Project>
+      <Name>Nop.Core</Name>
+      <Private>False</Private>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\..\..\..\..\websites\nopCommerce_2.80_Source\Libraries\Nop.Data\Nop.Data.csproj">
+      <Project>{ccd7f2c9-6a2c-4cf0-8e89-076b8fc0f144}</Project>
+      <Name>Nop.Data</Name>
+      <Private>False</Private>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\..\..\..\..\websites\nopCommerce_2.80_Source\Libraries\Nop.Services\Nop.Services.csproj">
+      <Project>{210541ad-f659-47da-8763-16f36c5cd2f4}</Project>
+      <Name>Nop.Services</Name>
+      <Private>False</Private>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\..\..\..\..\websites\nopCommerce_2.80_Source\Presentation\Nop.Web.Framework\Nop.Web.Framework.csproj">
+      <Project>{75fd4163-333c-4dd5-854d-2ef294e45d94}</Project>
+      <Name>Nop.Web.Framework</Name>
+      <Private>False</Private>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\..\..\..\..\websites\nopCommerce_2.80_Source\Presentation\Nop.Web\Nop.Web.csproj">
+      <Project>{4f1f649c-1020-45be-a487-f416d9297ff3}</Project>
+      <Name>Nop.Web</Name>
+      <Private>False</Private>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Service References\" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

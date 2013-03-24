@@ -1,0 +1,8 @@
+﻿Group: Misc
+FriendlyName: Order Free Sample
+SystemName: Misc.FreeSample
+Version: 1.00
+SupportedVersions: 2.80
+Author: Lam Woon Cherk (http://panorazzi.com)
+DisplayOrder: 1
+FileName: Nop.Plugin.Misc.FreeSample.dll

@@ -1,0 +1,94 @@
+﻿@using Nop.Web.Framework;
+
+@model Nop.Plugin.Misc.FreeSample.Models.OrderFreeSampleModel
+@{
+    Layout = null;
+}
+
+<div class="page submit-quote-cart-page">
+    <div class="page-title">
+        <h1>@T("Plugin.Misc.FreeSample.OrderForm")</h1>
+    </div>
+    <div class="clear">
+    </div>
+    <div class="page-body">
+
+        @using (Html.BeginForm())
+        {
+            <fieldset>
+                <p class="message-error">
+                    @Html.ValidationSummary(true)
+                </p>
+                <div class="forms-box">
+                    <div class="inputs">
+                        @Html.LabelFor(m => m.ProductName)
+                        @Html.RequiredHint()
+                        <div class="input-box">
+                            @Html.TextBoxFor(m => m.ProductName)
+                        </div>
+                        @Html.ValidationMessageFor(m => m.Name)
+                    </div>
+                    <div class="inputs">
+                        @Html.LabelFor(m => m.Name)
+                        @Html.RequiredHint()
+                        <div class="input-box">
+                            @Html.TextBoxFor(m => m.Name)
+                        </div>
+                        @Html.ValidationMessageFor(m => m.Name)
+                    </div>
+                    <div class="inputs">
+                        @Html.LabelFor(m => m.Company)
+                        <div class="input-box">
+                            @Html.TextBoxFor(m => m.Company)
+                        </div>
+                    </div>
+                    <div class="inputs">
+                        @Html.LabelFor(m => m.Address)
+                        @Html.RequiredHint()
+                        <div class="input-box">
+                            @Html.TextAreaFor(m => m.Address)
+                        </div>
+                        @Html.ValidationMessageFor(m => m.Address)
+                    </div>
+                    <div class="inputs">
+                        @Html.LabelFor(m => m.PostCode)
+                        @Html.RequiredHint()
+                        <div class="input-box">
+                            @Html.TextBoxFor(m => m.PostCode)
+                        </div>
+                        @Html.ValidationMessageFor(m => m.PostCode)
+                    </div>
+                    <div class="inputs">
+                        @Html.LabelFor(m => m.Phone)
+                        @Html.RequiredHint()
+                        <div class="input-box">
+                            @Html.TextBoxFor(m => m.Phone)
+                        </div>
+                        @Html.ValidationMessageFor(m => m.Phone)
+                    </div>
+                    <div class="inputs">
+                        @Html.LabelFor(m => m.Email)
+                        @Html.RequiredHint()
+                        <div class="input-box">
+                            @Html.TextBoxFor(m => m.Email)
+                        </div>
+                        @Html.ValidationMessageFor(m => m.Email)
+                    </div>
+                    <div class="inputs">
+                        @Html.LabelFor(m => m.CommentEnquiry)
+                        <div class="input-box">
+                            @Html.TextAreaFor(m => m.CommentEnquiry)
+                        </div>
+                    </div>
+                    
+                </div>
+                <div class="clear">
+                </div>
+                <div class="buttons">
+                    <input type="submit" class="button-1" 
+                        value="@T("Plugin.Misc.FreeSample.Submit")" />
+                </div>
+            </fieldset>
+        }
+    </div>
+</div>

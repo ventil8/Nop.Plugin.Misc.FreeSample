@@ -1,0 +1,14 @@
+﻿@{
+    Layout = null;
+}
+
+<div class="page submit-quote-cart-page">
+    <div class="page-title">
+        <h1>@T("Plugin.Misc.FreeSample.SubmitFormSuccessful")</h1>
+    </div>
+    <div class="clear">
+    </div>
+    <div class="page-body">
+        @Html.Action("TopicBlock", "Topic", new { systemName = "OrderFreeSampleSuccessful" })
+    </div>
+</div>
